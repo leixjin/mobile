@@ -248,6 +248,7 @@ var (
 	buildIOSVersion string      // -iosversion
 	buildAndroidAPI int         // -androidapi
 	buildTags       stringsFlag // -tags
+	buildSimulator  bool        // -simulator
 )
 
 func addBuildFlags(cmd *command) {
@@ -263,6 +264,7 @@ func addBuildFlags(cmd *command) {
 	cmd.flag.BoolVar(&buildI, "i", false, "")
 	cmd.flag.BoolVar(&buildTrimpath, "trimpath", false, "")
 	cmd.flag.Var(&buildTags, "tags", "")
+	cmd.flag.BoolVar(&buildSimulator, "simulator", false, "")
 }
 
 func addBuildFlagsNVXWork(cmd *command) {
