@@ -39,7 +39,7 @@ func platformArchs(platform string) []string {
 	case "ios":
 		return []string{"arm64"}
 	case "iossimulator":
-		return []string{"arm64", "amd64"}
+		return []string{"amd64"}
 	case "macos", "maccatalyst":
 		return []string{"arm64", "amd64"}
 	case "android":
